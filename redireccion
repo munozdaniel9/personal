@@ -1,0 +1,6 @@
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^dominioviejo.com [NC,OR]
+RewriteCond %{HTTP_HOST} ^www.dominioviejo.com [NC]
+RewriteRule ^(.*)$ http://dominionuevo.com/$1 [L,R=301,NC]
+
+#Esto redirecciona todas las url viejas a la nueva url compatible con WT
