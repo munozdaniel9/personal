@@ -5,6 +5,14 @@ RewriteRule ^(.*)$ http://dominionuevo.com/$1 [L,R=301,NC]
 
 #Esto redirecciona todas las url viejas a la nueva url compatible con WT
 
+RewriteEngine on
+RewriteCond %{HTTPS} !=on [NC]
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+#Esto fuerza el https en todo el host, compatible con WT
+
+
+
 
 RewriteEngine on 
 RewriteRule ^folder/(.*)$ http://dominio.com/$1 [R=301,L] 
