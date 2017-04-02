@@ -1,0 +1,27 @@
+<script>
+        if(/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)){
+            if(document.URL !="http://domain.com/mobile/")
+            {
+                window.location ="http://domain.com/mobile/";
+            }
+        }
+</script>
+
+Una mejor manera
+http://mobiledetect.net/
+
+/*
+
+include 'Mobile_Detect.php';
+$detect = new Mobile_Detect();
+
+// Check for any mobile device.
+if ($detect->isMobile())
+
+// Check for any tablet.
+if($detect->isTablet())
+
+// 3. Check for any mobile device, excluding tablets.
+if ($detect->isMobile() && !$detect->isTablet())
+
+*/
